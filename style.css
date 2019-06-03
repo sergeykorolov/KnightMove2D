@@ -1,0 +1,61 @@
+.gameWindow{
+    border: solid 1px gray;
+    height: 502px;
+    width: 502px;
+}
+
+.cell{
+    display: inline-block;
+    border: solid 1px gainsboro;
+    width: 55px;
+    height: 55px;
+    margin-right: -5px;
+    margin-bottom: -5px;
+}
+
+.cell:hover{
+    cursor: pointer;
+}
+
+/*закрашиваем через одну черным цветом клетки шахмотной доски*/
+.row:nth-child(even) .cell:nth-child(odd),
+.row:nth-child(odd) .cell:nth-child(even){
+    background-color: black;
+}
+
+.row:first-child, .row:last-child{
+    height: 25px;
+}
+
+.letters{
+    display: inline-block;
+    width: 52px;
+    text-align: center;
+    color: gray;
+    font-family: sans-serif;
+}
+.numbers{
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    vertical-align: top;
+    padding-top: 21px;
+    padding-left: 3px;
+    color: gray;
+    font-family: sans-serif;
+}
+
+.corner{
+    display: inline-block;
+    height: 20px;
+    width: 25px;
+    padding-left: 1px;
+}
+
+.paintGreen{
+    background: green !important;
+}
+
+.paintBlue{
+    background: blue !important;
+}

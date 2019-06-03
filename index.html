@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KnightMove2D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Структура игрового поля-->
+    <div class="gameWindow">
+        <div class="row">
+            <div class="corner"></div>
+            <div class="letters">A</div>
+            <div class="letters">B</div>
+            <div class="letters">C</div>
+            <div class="letters">D</div>
+            <div class="letters">E</div>
+            <div class="letters">F</div>
+            <div class="letters">G</div>
+            <div class="letters">H</div>
+            <div class="corner"></div>
+        </div>
+        <div class="row">
+            <div class="numbers">8</div>
+            <div class="cell" id="A8" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="B8" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="C8" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="D8" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="E8" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="F8" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="G8" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="H8" onclick="clickOnCell(event)"></div>
+            <div class="numbers">8</div>
+        </div>
+        <div class="row">
+            <div class="numbers">7</div>
+            <div class="cell" id="A7" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="B7" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="C7" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="D7" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="E7" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="F7" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="G7" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="H7" onclick="clickOnCell(event)"></div>
+            <div class="numbers">7</div>
+        </div>
+        <div class="row">
+            <div class="numbers">6</div>
+            <div class="cell" id="A6" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="B6" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="C6" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="D6" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="E6" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="F6" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="G6" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="H6" onclick="clickOnCell(event)"></div>
+            <div class="numbers">6</div>
+        </div>
+        <div class="row">
+            <div class="numbers">5</div>
+            <div class="cell" id="A5" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="B5" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="C5" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="D5" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="E5" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="F5" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="G5" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="H5" onclick="clickOnCell(event)"></div>
+            <div class="numbers">5</div>
+        </div>
+        <div class="row">
+            <div class="numbers">4</div>
+            <div class="cell" id="A4" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="B4" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="C4" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="D4" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="E4" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="F4" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="G4" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="H4" onclick="clickOnCell(event)"></div>
+            <div class="numbers">4</div>
+        </div>
+        <div class="row">
+            <div class="numbers">3</div>
+            <div class="cell" id="A3" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="B3" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="C3" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="D3" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="E3" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="F3" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="G3" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="H3" onclick="clickOnCell(event)"></div>
+            <div class="numbers">3</div>
+        </div>
+        <div class="row">
+            <div class="numbers">2</div>
+            <div class="cell" id="A2" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="B2" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="C2" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="D2" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="E2" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="F2" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="G2" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="H2" onclick="clickOnCell(event)"></div>
+            <div class="numbers">2</div>
+        </div>
+        <div class="row">
+            <div class="numbers">1</div>
+            <div class="cell" id="A1" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="B1" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="C1" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="D1" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="E1" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="F1" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="G1" onclick="clickOnCell(event)"></div>
+            <div class="cell" id="H1" onclick="clickOnCell(event)"></div>
+            <div class="numbers">1</div>
+        </div>
+        <div class="row">
+            <div class="corner"></div>
+            <div class="letters">A</div>
+            <div class="letters">B</div>
+            <div class="letters">C</div>
+            <div class="letters">D</div>
+            <div class="letters">E</div>
+            <div class="letters">F</div>
+            <div class="letters">G</div>
+            <div class="letters">H</div>
+            <div class="corner"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
